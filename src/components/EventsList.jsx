@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import EventsCard from "./EventsCard";
 
-class Events extends Component {
+class EventsList extends Component {
   state = {
     events: []
   };
@@ -32,4 +32,4 @@ class Events extends Component {
   }
 }
 
-export default Events;
+export default EventsList;
