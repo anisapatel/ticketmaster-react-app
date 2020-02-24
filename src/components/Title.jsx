@@ -4,10 +4,10 @@ const Title = props => {
   return (
     <>
       <header>
-        <h1>Event Something</h1>
+        <h1>LA Music Events</h1>
         <h4>
-          Find events and filter your search by location, date, availability and
-          much more!
+          Find music events in LA and filter your search by location, date,
+          availability and much more!
         </h4>
       </header>
     </>

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import EventsCard from "./EventsCard";
+import EventsMap from "./EventsMap";
 
 class EventsList extends Component {
   state = {
@@ -8,7 +9,7 @@ class EventsList extends Component {
 
   componentDidMount() {
     fetch(
-      "https://app.ticketmaster.com/discovery/v2/events.json?countryCode=UK&apikey=D0AG4QZZ2Fb9Kk0pR6K8ZDeUVHIoyDt6"
+      "https://app.ticketmaster.com/discovery/v2/events.json?classificationName=music&dmaId=324&apikey=D0AG4QZZ2Fb9Kk0pR6K8ZDeUVHIoyDt6"
     )
       .then(response => {
         return response.json();
@@ -21,9 +22,9 @@ class EventsList extends Component {
   }
 
   render() {
-    console.log(this.state.events);
     return (
       <>
+        <EventsMap events={this.state.events} />
         {this.state.events.map(event => {
           return <EventsCard event={event} key={event.id} />;
         })}
